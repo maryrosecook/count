@@ -32,7 +32,7 @@ If you have a reasonably deep understanding of this code, you should be able to 
 
     $ cd path/to/count/repo
     $ ruby app.rb
-    $ open http://localhost:9393
+    $ open http://localhost:4567
 
 ## Run the tests
 
