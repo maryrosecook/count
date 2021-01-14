@@ -1,13 +1,11 @@
 "use strict";
 
 (function() {
-  window.addEventListener("load", function() {
-    var incrementButton = document.getElementById("increment");
-    var countDiv = document.getElementById("count");
+  var incrementButton = document.getElementById("increment");
+  var countDiv = document.getElementById("count");
 
-    new CountController(incrementButton,
-                        new CountModel(),
-                        new CountView(countDiv),
-                        new CountPersister($));
-  });
+  new CountController(incrementButton,
+                      new CountModel(),
+                      new CountView(countDiv),
+                      new CountPersister($));
 })();

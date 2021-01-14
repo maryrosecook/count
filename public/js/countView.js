@@ -2,16 +2,13 @@
 
 "use strict";
 
-(function(exports) {
-  function CountView(countElement) {
+class CountView {
+  constructor(countElement) {
     this._countElement = countElement;
-  };
+  }
 
-  CountView.prototype = {
-    display: function(count) {
-      this._countElement.innerHTML = count;
-    }
-  };
+  display(count) {
+    this._countElement.innerHTML = count;
+  }
+}
 
-  exports.CountView = CountView;
-})(this);

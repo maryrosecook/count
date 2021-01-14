@@ -2,22 +2,18 @@
 
 "use strict";
 
-(function(exports) {
-  function CountPersister($) {
+class CountPersister {
+  constructor($) {
     this._$ = $;
-  };
+  }
+ 
+  get(callback) {
+    this._$.get("/count", function(response) {
+      callback(response.count);
+    });
+  }
 
-  CountPersister.prototype = {
-    get: function(callback) {
-      this._$.get("/count", function(response) {
-        callback(response.count);
-      });
-    },
-
-    set: function(count, callback) {
-      this._$.post("/count", { count: count }, callback);
-    }
-  };
-
-  exports.CountPersister = CountPersister;
-})(this);
+  set(count, callback) {
+    this._$.post("/count", { count: count }, callback);
+  }
+}

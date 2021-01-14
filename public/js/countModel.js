@@ -2,24 +2,20 @@
 
 "use strict";
 
-(function(exports) {
-  function CountModel() {
+class CountModel {
+  constructor() {
     this._count = 0;
-  };
+  }
 
-  CountModel.prototype = {
-    count: function() {
-      return this._count;
-    },
+  count() {
+    return this._count;
+  }
 
-    set: function(count) {
-      this._count = count;
-    },
+  set(count) {
+    this._count = count;
+  }
 
-    increment: function() {
-      this._count++;
-    }
-  };
-
-  exports.CountModel = CountModel;
-})(this);
+  increment() {
+    this._count++;
+  }
+}
